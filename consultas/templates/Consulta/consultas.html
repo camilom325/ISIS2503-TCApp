@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="content">
+  <div class="">
+    <div class="page-header-title">
+      <h4 class="page-title" style="text-align: center">Consulta del estado de las solicitudes</h4>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="page-content-wrapper">
+    <div class="container">
+      <!-- Content page -->
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table table-hover table-light">
+            <thead>
+              <tr style="color: #374f59">
+                <th>Nombre del solicitante</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for consulta in consulta_list %}
+              <tr>
+                <td>{{ consulta.nombre }}</td>
+                <td>
+                  {% if consulta.estado %}
+                    Aprobado
+                  {% else %}
+                    En revisión
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

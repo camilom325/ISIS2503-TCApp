@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="content">
+  <div class="">
+    <div class="page-header-title">
+      <h4 class="page-title" style="text-align: center">Solicitudes</h4>
+      <div style="text-align: right">
+        <button
+          type="button"
+          class="btn btn-success waves-effect waves-light"
+          onClick=" window.location.href='/solicitudcreate' "
+          style="text-align: center"
+        >
+          añadir solicitud +
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="page-content-wrapper">
+    <div class="container">
+      <!-- Content page -->
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table table-hover table-light">
+            <thead>
+              <tr style="color: #374f59">
+                <th>Nombre del solicitante</th>
+                <th>Profesión</th>
+                <th>Actividad</th>
+                <th>Empresa</th>
+                <th>Ingresos</th>
+                <th>Deudas</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for solicitud in solicitud_list %}
+              <tr>
+                <td>{{ solicitud.nombre }}</td>
+                <td>{{ solicitud.profesion }}</td>
+                <td>{{ solicitud.actividad }}</td>
+                <td>{{ solicitud.empresa }}</td>
+                <td>{{ solicitud.ingresos }}</td>
+                <td>{{ solicitud.deudas }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
