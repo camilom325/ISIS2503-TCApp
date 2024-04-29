@@ -7,4 +7,6 @@ urlpatterns = [
     path('solicitudes/', views.solicitud_list, name='solicitudList'),
     path('solicitudcreate/', csrf_exempt(views.solicitud_create),
          name='solicitudCreate'),
+    path('solicitudalter/', csrf_exempt(views.solicitud_alter),
+         name='solicitudAlter'),
 ]

@@ -9,6 +9,7 @@ class Solicitudes(models.Model):
     ingresos = models.BigIntegerField()
     deudas = models.BigIntegerField()
     estado = models.BooleanField(default=False)
+    hash = models.CharField(max_length=50, default="no hash")
 
     def __str__(self):
         return '{}'.format(self.nombre)

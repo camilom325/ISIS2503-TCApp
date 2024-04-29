@@ -13,6 +13,14 @@
         >
           añadir solicitud +
         </button>
+        <button
+          type="button"
+          class="btn btn-danger waves-effect waves-light"
+          onClick=" window.location.href='/solicitudalter' "
+          style="text-align: center"
+        >
+          Alterar solicitudes
+        </button>
       </div>
     </div>
   </div>
@@ -34,6 +42,7 @@
                 <th>Empresa</th>
                 <th>Ingresos</th>
                 <th>Deudas</th>
+                <th>HMAC</th>
               </tr>
             </thead>
             <tbody>
@@ -45,11 +54,11 @@
                 <td>{{ solicitud.empresa }}</td>
                 <td>{{ solicitud.ingresos }}</td>
                 <td>{{ solicitud.deudas }}</td>
+                <td>{{ solicitud.hash }}</td>
               </tr>
               {% endfor %}
             </tbody>
           </table>
-
         </div>
       </div>
     </div>

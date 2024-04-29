@@ -33,6 +33,13 @@
                     En revisión
                   {% endif %}
                 </td>
+                <td>
+                  {% if consulta.alterado %}
+                    Alterado
+                  {% else %}
+                    No alterado
+                  {% endif %}
+                </td>
               </tr>
               {% endfor %}
             </tbody>
