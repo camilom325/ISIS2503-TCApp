@@ -7,12 +7,14 @@ from cryptography.fernet import Fernet
 
 password = b"password"
 salt = b"slat_value"
+
 kdf = PBKDF2HMAC(
     algorithm=hashes.SHA256(),
     length=32,
     salt=salt,
     iterations=390000,
 )
+
 KEY = base64.urlsafe_b64encode(kdf.derive(password))
 __main__.KEY = KEY
 fernet = Fernet(KEY)
