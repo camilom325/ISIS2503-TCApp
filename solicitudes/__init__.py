@@ -6,7 +6,7 @@ import __main__
 from cryptography.fernet import Fernet
 
 password = b"password"
-salt = os.urandom(16)
+salt = b"slat_value"
 kdf = PBKDF2HMAC(
     algorithm=hashes.SHA256(),
     length=32,
@@ -17,7 +17,6 @@ KEY = base64.urlsafe_b64encode(kdf.derive(password))
 __main__.KEY = KEY
 fernet = Fernet(KEY)
 __main__.fernet = fernet
-print(KEY)
 
 def encrypt_data(data):
     try:
