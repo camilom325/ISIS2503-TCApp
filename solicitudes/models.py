@@ -2,12 +2,12 @@ from django.db import models
 
 
 class Solicitudes(models.Model):
-    nombre = models.CharField(max_length=50)
-    profesion = models.CharField(max_length=50)
-    actividad = models.CharField(max_length=50)
-    empresa = models.CharField(max_length=50)
-    ingresos = models.BigIntegerField()
-    deudas = models.BigIntegerField()
+    nombre = models.CharField(max_length=250)
+    profesion = models.CharField(max_length=250)
+    actividad = models.CharField(max_length=250)
+    empresa = models.CharField(max_length=250)
+    ingresos = models.CharField(max_length=250)
+    deudas = models.CharField(max_length=250)
     estado = models.BooleanField(default=False)
     hash = models.CharField(max_length=50, default="no hash")
 

@@ -48,13 +48,13 @@
             <tbody>
               {% for solicitud in solicitud_list %}
               <tr>
-                <td>{{ solicitud.nombre }}</td>
-                <td>{{ solicitud.profesion }}</td>
-                <td>{{ solicitud.actividad }}</td>
-                <td>{{ solicitud.empresa }}</td>
-                <td>{{ solicitud.ingresos }}</td>
-                <td>{{ solicitud.deudas }}</td>
-                <td>{{ solicitud.hash }}</td>
+                <td style="max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.nombre }}</td>
+                <td style="max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.profesion }}</td>
+                <td style="max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.actividad }}</td>
+                <td style="max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.empresa }}</td>
+                <td style="max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.ingresos }}</td>
+                <td style="max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.deudas }}</td>
+                <td style="max-width: 160px; white-space: normal; overflow: hidden; text-overflow: ellipsis;">{{ solicitud.hash }}</td>
               </tr>
               {% endfor %}
             </tbody>
