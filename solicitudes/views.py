@@ -1,3 +1,4 @@
+import __main__
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -48,11 +49,7 @@ def solicitud_create(request):
 def solicitud_alter(request):
     solicitudes = get_solicitudes()
     
-    for solicitud in solicitudes:
-        solicitud.deudas = encrypt_data(str(random.randint(1, 1000)))
-        solicitud.ingresos = encrypt_data(str(random.randint(1, 1000)))
-        solicitud.estado = False
-        solicitud.save()
+    __main__.alter_solicitudes(solicitudes)
         
     try:
         for solicitud in solicitudes:

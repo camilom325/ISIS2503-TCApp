@@ -20,7 +20,7 @@ def create_solicitud(form):
     solicitudes.hash = calculate_hash(
         str(solicitudes.nombre)+str(solicitudes.profesion)+str(solicitudes.actividad)+str(solicitudes.empresa)+str(solicitudes.ingresos)+str(solicitudes.deudas))
     solicitudes.save()
-    return ()
+    return solicitudes
 
 def calculate_hash(data):
     hash_object = hashlib.sha256(data.encode())
