@@ -34,7 +34,7 @@ def get_Pagares(request):
 
 def get_Documento(request,idSent):
     #data = json.loads(request.body)
-    queryset = Documento.objects.get(id = idSent)
+    queryset = Documento.objects.get(id = idSent)[0]
     context = list(queryset.values('id', 'imagen', 'solicitud'))
 
     return JsonResponse(queryset, safe=False)
