@@ -32,23 +32,23 @@ def get_Pagares(request):
 
 
 
-def get_Documento(request):
-    queryset = Documento.objects.get(id = request.GET['id'])
+def get_Documento(request,idSent):
+    queryset = Documento.objects.get(id = idSent)
     return JsonResponse(queryset, safe=False)
 
-def get_DocumentoIdentidad(request):
-    queryset= DocumentoIdentidad.objects.get(id = request.GET['id'])
+def get_DocumentoIdentidad(request,idSent):
+    queryset= DocumentoIdentidad.objects.get(id = idSent)
 
     return (queryset)
 
-def get_DesprendiblePago(request):
+def get_DesprendiblePago(request,idSent):
     
-    queryset = DesprendiblePago.objects.get(id = request.GET['id'])
+    queryset = DesprendiblePago.objects.get(id = idSent)
 
     return (queryset)
 
-def get_Pagare(request):
+def get_Pagare(request,idSent):
 
-    queryset= Pagare.objects.get(id = request.GET['id'])
+    queryset= Pagare.objects.get(id = request.idSent)
     return (queryset)
 
