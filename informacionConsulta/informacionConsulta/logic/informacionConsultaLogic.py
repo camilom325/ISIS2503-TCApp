@@ -6,24 +6,24 @@ from django.http import JsonResponse
 import json
 
 
-def get_Documentos():
+def get_Documentos(request):
     queryset = Documento.objects.all()
     context = list(queryset.values('id', 'imagen', 'solicitud'))
     return JsonResponse(context, safe=False)
 
 
-def get_DocumentosIdentidad():
+def get_DocumentosIdentidad(request):
     queryset= DocumentoIdentidad.objects.all()
     context = list(queryset.values('id', 'imagen', 'solicitud','scoreConfiabilidad'))
     return JsonResponse(context, safe=False)
 
-def get_DesprendiblesPago():
+def get_DesprendiblesPago(request):
     
     queryset = DesprendiblePago.objects.all()
     context = list(queryset.values('id', 'imagen', 'solicitud','total'))
     return JsonResponse(context, safe=False)
 
-def get_Pagares():
+def get_Pagares(request):
 
     queryset= Pagare.objects.all()
     context = list(queryset.values('id', 'imagen', 'solicitud','firma'))
