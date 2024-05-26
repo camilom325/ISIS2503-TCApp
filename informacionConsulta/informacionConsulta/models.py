@@ -2,7 +2,7 @@ from django.db import models
 
 class Documento(models.Model):
     imagen = models.URLField(max_length=200)
-    solictud = models.IntegerField(null=False, default=None)
+    solicitud = models.IntegerField(null=False, default=None)
    
 
 class DocumentoIdentidad(Documento):
