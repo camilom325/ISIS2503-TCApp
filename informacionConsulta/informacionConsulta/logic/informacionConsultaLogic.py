@@ -36,18 +36,18 @@ def get_Documento(request):
     queryset = Documento.objects.get(id = request.GET['id'])
     return JsonResponse(queryset, safe=False)
 
-def get_DocumentosIdentidad(request):
+def get_DocumentoIdentidad(request):
     queryset= DocumentoIdentidad.objects.get(id = request.GET['id'])
 
     return (queryset)
 
-def get_DesprendiblesPago(request):
+def get_DesprendiblePago(request):
     
     queryset = DesprendiblePago.objects.get(id = request.GET['id'])
 
     return (queryset)
 
-def get_Pagares(request):
+def get_Pagare(request):
 
     queryset= Pagare.objects.get(id = request.GET['id'])
     return (queryset)
