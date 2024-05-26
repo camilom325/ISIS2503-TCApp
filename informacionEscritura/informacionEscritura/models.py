@@ -8,9 +8,8 @@ class Documento(models.Model):
 class DocumentoIdentidad(Documento):
     scoreConfiabilidad = models.FloatField()
 
-
-class DocumentoIdentidad(Documento):
-    scoreConfiabilidad = models.FloatField()
+class DesprendiblePago(Documento):
+    total = models.FloatField()
 
 
 class Pagare(Documento):
