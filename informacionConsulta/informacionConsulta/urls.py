@@ -23,8 +23,8 @@ urlpatterns = [
     url(r'^documentosIdentidad/', informacionConsultaLogic.get_DocumentosIdentidad, name='documentosIdentidad'),
     url(r'^desprendiblesPago/', informacionConsultaLogic.get_DesprendiblesPago, name='desprendiblesPago'),
     url(r'^pagares/', informacionConsultaLogic.get_Pagares, name='pagares'),
-    url(r'^documentos/(?P<idSent>\d+)/', informacionConsultaLogic.get_Documento, name='documento'),
-    url(r'^documentosIdentidad/(?P<idSent>\d+)/', informacionConsultaLogic.get_DocumentoIdentidad, name='documentoIdentidad'),
-    url(r'^desprendiblesPago/(?P<idSent>\d+)/', informacionConsultaLogic.get_DesprendiblePago, name='desprendiblePago'),
-    url(r'^pagares/(?P<idSent>\d+)/', informacionConsultaLogic.get_Pagare, name='pagare')
+    url(r'^documentos/(?P<idSent>\w+)/', informacionConsultaLogic.get_Documento, name='documento'),
+    url(r'^documentosIdentidad/(?P<idSent>\w+)/', informacionConsultaLogic.get_DocumentoIdentidad, name='documentoIdentidad'),
+    url(r'^desprendiblesPago/(?P<idSent>\w+)/', informacionConsultaLogic.get_DesprendiblePago, name='desprendiblePago'),
+    url(r'^pagares/(?P<idSent>\w+)/', informacionConsultaLogic.get_Pagare, name='pagare')
 ]
