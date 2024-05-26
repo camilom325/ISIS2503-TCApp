@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
+from .logic import informacionConsultaLogic
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^documentos/', informacionConsultaLogic.get_Documentos, name='documentos'),
+    url(r'^documentosIdentidad/', informacionConsultaLogic.get_DocumentosIdentidad, name='documentosIdentidad'),
+    url(r'^desprendiblesPago/', informacionConsultaLogic.get_DesprendiblesPago, name='desprendiblesPago'),
+    url(r'^pagares/', informacionConsultaLogic.get_Pagares, name='pagares'),
+    url(r'^documentos/(?P<idSent>\d+)/', informacionConsultaLogic.get_Documento, name='documento'),
+    url(r'^documentosIdentidad/(?P<idSent>\d+)/', informacionConsultaLogic.get_DocumentosIdentidad, name='documentosIdentidad'),
+    url(r'^desprendiblesPago/(?P<idSent>\d+)/', informacionConsultaLogic.get_DesprendiblesPago, name='desprendiblesPago'),
+    url(r'^pagares/(?P<idSent>\d+)/', informacionConsultaLogic.get_Pagares, name='pagares')
 ]
