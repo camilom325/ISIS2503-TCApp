@@ -78,9 +78,7 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'user_db',
-        'PASSWORD': 'user_password'}
+        'NAME': BASE_DIR / 'db.sqlite3'}
     }
 
 
