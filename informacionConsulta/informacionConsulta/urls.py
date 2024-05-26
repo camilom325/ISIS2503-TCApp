@@ -19,7 +19,6 @@ from django.conf.urls import url, include
 from .logic import informacionConsultaLogic
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     url(r'^documentos/', informacionConsultaLogic.get_Documentos, name='documentos'),
     url(r'^documentosIdentidad/', informacionConsultaLogic.get_DocumentosIdentidad, name='documentosIdentidad'),
     url(r'^desprendiblesPago/', informacionConsultaLogic.get_DesprendiblesPago, name='desprendiblesPago'),

@@ -20,7 +20,6 @@ from .logic import informacionEscrituraLogic
 from django.conf.urls import url, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     url(r'^documentocreate/$', csrf_exempt(informacionEscrituraLogic.create_documento), name='documentoCreate'),
     url(r'^documentoidentidadcreate/$', csrf_exempt(informacionEscrituraLogic.create_documento_identidad), name='documentoIdentidadCreate'),
     url(r'^desprendiblepago/$', csrf_exempt(informacionEscrituraLogic.create_desprendible_pago), name='desprendiblePagoCreate'),
