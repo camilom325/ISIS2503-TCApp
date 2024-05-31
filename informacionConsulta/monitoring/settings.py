@@ -77,11 +77,12 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '/cloudsql/sprint4arquisoft:us-central1:bd-informacion-lectura',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'informacion-lectura_db',
         'USER': 'informacion_user',
         'PASSWORD': '1234',
+        'HOST': '10.105.144.7',
+        'PORT': '',
     }
 }
 

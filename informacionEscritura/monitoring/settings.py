@@ -75,13 +75,14 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES = {   
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '/cloudsql/sprint4arquisoft:us-central1:bd-informacion-escritura',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'informacion-escritura_db',
         'USER': 'informacion_user',
         'PASSWORD': '1234',
+        'HOST': '10.105.144.3',
+        'PORT': '',
     }
     }
 
