@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 DATABASES = {   
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'informacion-escritura_db',
+        'NAME': 'informacion-escritura_bd',
         'USER': 'informacion_user',
         'PASSWORD': '1234',
         'HOST': '10.105.144.3',
